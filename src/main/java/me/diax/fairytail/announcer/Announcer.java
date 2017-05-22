@@ -43,7 +43,7 @@ public class Announcer implements Runnable {
 
     private void announce(String message) {
         String spacer = properties.getSpacer();
-        server.broadcastMessage(String.format(Util.addColor("&r%s\n&r%s\n&r%s"), spacer, message, spacer));
+        server.getOnlinePlayers().forEach(p -> p.sendMessage(String.format(Util.addColor("&r%s\n&r%s\n&r%s"), spacer, message, spacer)));
     }
 
     @Override

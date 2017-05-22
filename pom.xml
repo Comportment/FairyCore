@@ -5,8 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.diax.fairytail</groupId>
     <artifactId>FairyCore</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
+    <name>FairyCore</name>
+    <url>https://github.com/Comportment/FairyCore</url>
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
         <resources>

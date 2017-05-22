@@ -1,10 +1,10 @@
  name: FairyCore
- version: 1.0.0
+ version: 1.0.1
  description: Core plugin for FairyTail
 
  author: Comportment
  #authors: []
- website: https://github.com/Comportment
+ website: https://github.com/Comportment/FairyCore
 
  main: me.diax.fairytail.Main
  database: false
