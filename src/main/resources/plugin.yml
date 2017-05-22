@@ -1,0 +1,11 @@
+ name: FairyCore
+ version: 1.0.0
+ description: Core plugin for FairyTail
+
+ author: Comportment
+ #authors: []
+ website: https://github.com/Comportment
+
+ main: me.diax.fairytail.Main
+ database: false
+ #depend: []
