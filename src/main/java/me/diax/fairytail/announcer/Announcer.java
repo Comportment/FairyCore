@@ -16,6 +16,7 @@
 
 package me.diax.fairytail.announcer;
 
+import me.diax.fairytail.Main;
 import me.diax.fairytail.util.Util;
 import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
@@ -33,7 +34,7 @@ public class Announcer implements Runnable {
     private String[] messages;
     private int index;
 
-    public Announcer(Plugin plugin) {
+    public Announcer(Main plugin) {
         properties = Util.loadConfig("announcer.properties", AnnouncerProperties.class, this.getClass().getClassLoader());
         this.server = plugin.getServer();
         this.messages = properties.getMessages();

@@ -14,30 +14,31 @@
  * limitations under the License.
  */
 
-package me.diax.fairytail;
+package me.diax.fairytail.joinleave;
 
-import me.diax.fairytail.announcer.Announcer;
-import me.diax.fairytail.joinleave.JoinQuit;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.Arrays;
+import com.knockturnmc.api.util.NamedProperties;
+import com.knockturnmc.api.util.Property;
+import me.diax.fairytail.util.Util;
 
 /**
- * Created by Comportment at 22:30 on 22/05/17
+ * Created by Comportment at 00:57 on 23/05/17
  * https://github.com/Comportment | comportment@diax.me
  *
  * @author Comportment
  */
-public class Main extends JavaPlugin {
+public class JoinQuitProperties extends NamedProperties {
 
-    @Override
-    public void onEnable() {
-        new Announcer(this);
-        new JoinQuit(this);
+    @Property(value = "joinMessage", defaultvalue = "&7[&a+&7] <player> has joined!")
+    private String joinMessage;
+
+    @Property(value = "quitMessage", defaultvalue = "&7[&c+&7] <player> has left!")
+    private String quitMessage;
+
+    public String getJoinMessage() {
+        return Util.addColor(joinMessage);
     }
 
-    public void registerEvents(Listener... listeners) {
-        Arrays.stream(listeners).forEach(listener -> this.getServer().getPluginManager().registerEvents(listener, this));
+    public String getQuitMessage() {
+        return Util.addColor(quitMessage);
     }
 }
